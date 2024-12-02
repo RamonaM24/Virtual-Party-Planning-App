@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../contect/authContext';
+import { useAuth } from '../context/authContext';
 
 const Profile = () => {
 

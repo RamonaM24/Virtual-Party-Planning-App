@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
 
     //Fetch user details from API
     useEffect(() => {
-        const storedUser = JSON,parse(localStroage.getItem('user'));
+        const storedUser = JSON.parse(localStorage.getItem('user'));
         if (storedUser) {
             setUser(storedUser);
         }
@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
 
     const logout = () => {
         setUser(null);
-        localStroage.removeItem('user');
+        localStorage.removeItem('user');
     };
 
     return (
