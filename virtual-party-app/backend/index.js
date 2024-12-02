@@ -59,5 +59,10 @@ app.post('/register', async (req, res) => {
 
 //Start the server
 app.listen(port, () => {
-    console.log('API is running on http://localhost:${port}');
+    console.log(`API is running on http://localhost:${port}`);
 });
+
+//Because frontend and backend are running on different ports, we need to run Cross Origin Resource Sharing
+// to allow the frontend to make requests to the backend
+const cors = require('cors');
+app.use(cors());
