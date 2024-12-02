@@ -16,7 +16,7 @@ const Register = () => {
                         </input>
                         <input type='dateofbirth' name='dateofbirth' placeholder='Date / Month / Year of Birth' className='register-input'>
                         </input>
-                        <Button buttonStyle='btn--outline'>Submit</Button>
+                        <button type="submit">Register</button>
                     </form>
         </div>
     );

@@ -4,12 +4,14 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 
+//Create a root for React 18+
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-ReactDOM.render(
+
+root.render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>,
-  document.getElementById('root')
+  </BrowserRouter>
 );
 
 
