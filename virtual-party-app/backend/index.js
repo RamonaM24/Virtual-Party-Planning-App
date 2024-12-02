@@ -66,3 +66,20 @@ app.listen(port, () => {
 // to allow the frontend to make requests to the backend
 const cors = require('cors');
 app.use(cors());
+
+//To ensure user can successfully update their profiles
+app.put('/updateProfile', async (req, res) => {
+    const { email, password } = req.body;
+
+    //Update user logic (validate and update the database)
+    const user = await findUserByEmail(email);
+    if(user) {
+        if(password) {
+            user.hashedPassword = bcrypt.hashSync(password, 10);
+        }
+        user.email = email; 
+        res.status(200).json({ email: user.email });
+    } else {
+        res.status(404).json({ message: 'User not found' });
+    }
+});
