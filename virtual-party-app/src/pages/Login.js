@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Grid, Paper, Avatar, TextField, Button, Typography, Link, FormControlLabel, Checkbox } from '@mui/material';
+import { Grid, Paper, Avatar, TextField, Button, Typography, FormControlLabel, Checkbox } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import axios from 'axios';
+import { Link } from 'react-router-dom'; // Import from react-router-dom
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -60,7 +61,7 @@ const Login = () => {
           <Link href="#">Forgot password?</Link>
         </Typography>
         <Typography>
-          Do you have an account? <Link href="#">Sign Up</Link>
+          Do you have an account? <Link to="/register">Register</Link>
         </Typography>
       </Paper>
     </Grid>
