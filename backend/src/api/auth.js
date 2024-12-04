@@ -84,5 +84,35 @@ router.get("/users/:uid", async (req, res) => {
       res.status(404).send({ error: error.message });
     }
   });
+
+// Update User Route
+router.patch("/users/:uid", async (req, res) => {
+    const { uid } = req.params;
+    const { displayName, email, ...additionalFields } = req.body;
   
+    try {
+      // Update Authentication Data
+      const updateAuthData = {};
+      if (displayName) updateAuthData.displayName = displayName;
+      if (email) updateAuthData.email = email;
+  
+      if (Object.keys(updateAuthData).length > 0) {
+        await admin.auth().updateUser(uid, updateAuthData);
+      }
+  
+      // Update Firestore Data
+      const userDocRef = admin.firestore().collection("users").doc(uid);
+      if (Object.keys(additionalFields).length > 0) {
+        await userDocRef.update(additionalFields);
+      }
+  
+      res.status(200).send({
+        message: "User profile updated successfully!",
+        updatedFields: { displayName, email, ...additionalFields },
+      });
+    } catch (error) {
+      res.status(400).send({ error: error.message });
+    }
+  });
+
 module.exports = router;
