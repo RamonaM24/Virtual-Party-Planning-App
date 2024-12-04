@@ -56,4 +56,33 @@ router.post("/login", async (req, res) => {
   }
 });
 
+// Get User Profile Route
+router.get("/users/:uid", async (req, res) => {
+    const { uid } = req.params;
+  
+    try {
+      // Fetch user details from Firebase Authentication
+      const userRecord = await admin.auth().getUser(uid);
+  
+      // Fetch additional user details from Firestore
+      const userDoc = await admin.firestore().collection("users").doc(uid).get();
+  
+      if (!userDoc.exists) {
+        throw new Error("User details not found in the database.");
+      }
+  
+      const userData = userDoc.data();
+  
+      res.status(200).send({
+        message: "User profile fetched successfully!",
+        uid: userRecord.uid,
+        email: userRecord.email,
+        displayName: userRecord.displayName,
+        additionalInfo: userData,
+      });
+    } catch (error) {
+      res.status(404).send({ error: error.message });
+    }
+  });
+  
 module.exports = router;
