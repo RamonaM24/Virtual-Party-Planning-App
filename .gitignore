@@ -1,0 +1,5 @@
+# Ignore Node.js modules
+/backend/node_modules
+
+# Ignore Firebase Service Account Key
+/backend/serviceAccountKey.json
