@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
 import Navbar from './Navbar';
+import Invitation from './pages/Invitation';
 
 const theme = createTheme();
 
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/invitation" element={<Invitation />} />
         </Routes>
       </div>
     </ThemeProvider>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TextField, Button, Typography, Grid, Paper } from '@mui/material';
+import axios from 'axios';
 
 const Invitation = () => {
     const [guestName, setGuestName] = useState('');
@@ -7,13 +8,19 @@ const Invitation = () => {
     const [eventDetails, setEventDetails] = useState('');
     const [responseMessage, setResponseMessage] = useState('');
 
-    const handleSendInvitation = (e) => {
+    const handleSendInvitation = async (e) => {
         e.preventDefault();
-        //mock the sending action for now
-        setResponseMessage(`Invitation sent to ${guestName} at ${email}`);
-        setGuestName('');
-        setEmail('');
-        setEventDetails('');
+        try {
+            const response = await axios.post('http://localhost:5000/invitations', {
+                guestName,
+                email,
+                eventDetails,
+             });
+             setResponseMessage(response.data.message);
+
+        } catch (error) {
+            setResponseMessage('Failed to send the invigtation. Please try again.');
+        }
     };
 
     const paperStyle = { padding: 20, width: 400, margin: '20px auto' };
