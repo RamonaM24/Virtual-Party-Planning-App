@@ -1,24 +1,63 @@
 /* Apply the background color to the page */
 body {
-  background-color: #ff00ff; /* Magenta color */
+  background-color: #030303; 
   margin: 0;
   padding: 0;
   height: 100vh;
+}
+
+/* Add styling for the navigation bar */
+.navbar {
+  background-color: #4b0082; /* Purple navigation bar */
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+/* Spacer for navigation bar */
+.spacer {
+  height: 50px; /* Adjust this to match your navbar height */
 }
 
 /* Style the event creation form */
 .event-creation-form {
   background-color: white; /* White background for the form */
   padding: 20px;
+  margin: 50px auto 0; /* Add top margin to avoid overlap with navbar */
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 8px; /* Optional: add rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+  width: 80%; /* Adjust width as needed */
+  max-width: 400px; /* Optional: limit the form width */
 }
+
+/* Style the event creation form
+.event-creation-form {
+  background-color: white; /* White background for the form */
+  /* padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px; /* Optional: add rounded corners */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+/* } */ 
 
 .App { 
   text-align: center;
+}
+
+/* Adjust form container alignment */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: calc(100vh - 50px); /* Subtract navbar height */
 }
 
 .App-logo {

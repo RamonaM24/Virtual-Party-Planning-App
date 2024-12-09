@@ -1,0 +1,83 @@
+/* .home {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+  } */
+
+/* Overall page layout */
+.home-page {
+  background-color: #000; /* Black background */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Style for the home title */
+.home-title {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 3em;
+  color: #fff; /* White text */
+  margin-bottom: 10px;
+}
+
+/* Style for the home subtitle */
+.home-subtitle {
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 2em;
+  color: #fff; /* White text */
+  text-align: center;
+}
+
+/* Navbar styling */
+nav {
+  background-color: #6a0dad; /* Purple background */
+  width: 100%;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+/* Navbar links styling */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Hover effect for navbar links */
+nav ul li a:hover {
+  color: #ffcc00; /* Hover color (gold) */
+}
+
+  

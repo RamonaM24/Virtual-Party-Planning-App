@@ -28,7 +28,7 @@ const EventsCreationForm = () => {
           flexDirection: 'column',
           alignItems: 'center',
           padding: 3,
-          marginTop: 4,
+          marginTop: 15,
         }}
       >
         <h2>Create Event</h2>
