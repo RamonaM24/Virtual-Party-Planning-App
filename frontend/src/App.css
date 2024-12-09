@@ -37,17 +37,6 @@ body {
   max-width: 400px; /* Optional: limit the form width */
 }
 
-/* Style the event creation form
-.event-creation-form {
-  background-color: white; /* White background for the form */
-  /* padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 8px; /* Optional: add rounded corners */
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
-/* } */ 
-
 .App { 
   text-align: center;
 }
