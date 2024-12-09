@@ -14,6 +14,7 @@ To run the frontend locally, follow these steps:
    ```
 
 Start the development: npm start
+
 Navigate to Home page: http://localhost:300
 
 Navigate to Event Creation Form: http://localhost:3000/create-event
