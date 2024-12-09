@@ -1,6 +1,6 @@
 # Virtual Party Planning - Frontend
 
-This is the frontend part of the Virtual Party Planning application. It allows users to create events.
+This is the frontend part of the Virtual Party Planning application.
 
 ## Running the Frontend
 
@@ -14,5 +14,6 @@ To run the frontend locally, follow these steps:
    ```
 
 Start the development: npm start
+Navigate to Home page: http://localhost:300
 
-And Navigate to: http://localhost:3000/EventsCreationForm
+Navigate to Event Creation Form: http://localhost:3000/create-event
