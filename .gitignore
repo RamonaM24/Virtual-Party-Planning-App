@@ -1,8 +1,31 @@
-# Ignore Node.js modules
+# Node.js dependencies
+/node_modules
 /backend/node_modules
 
-# Ignore Firebase Service Account Key
+# Firebase
 /backend/serviceAccountKey.json
 
-# Ignore environment variables
+# Environment files
 /backend/.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+ATT70125.env
+
+# Testing
+/coverage
+
+# Production build
+/build
+
+# Miscellaneous
+.pnp
+.pnp.js
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
