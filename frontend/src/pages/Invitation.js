@@ -23,7 +23,7 @@ const Invitation = () => {
         }
     };
 
-    const paperStyle = { padding: 20, width: 400, margin: '20px auto' };
+    const paperStyle = { padding: 20, width: 400, margin: '100px auto' };
     const btnStyle = { marginTop: '16px' };
 
     return (
