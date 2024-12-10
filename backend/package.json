@@ -1,0 +1,23 @@
+{
+  "name": "virtual-party-planning-app",
+  "version": "1.0.0",
+  "description": "The Virtual Party Planning App is a full-stack web application designed to simplify organizing virtual events. It enables users to create and manage events, invite guests, share resources, and interact through integrated video conferencing. This project serves as a collaborative effort to enhance our full-stack development skills and build a portfolio-ready application.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/api/server.js",
+    "dev": "nodemon src/api/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "firebase-admin": "^13.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
