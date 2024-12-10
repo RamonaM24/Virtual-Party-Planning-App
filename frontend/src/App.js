@@ -7,6 +7,7 @@ import Register from './pages/Register';  // Register page
 import Profile from './pages/Profile';  // Profile page
 import Navbar from './Components/Navbar';  // Navbar component
 import EventsCreationForm from './Components/EventsCreationForm';
+import Invitation from './pages/Invitation';
 
 const theme = createTheme();
 
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/create-event" element={<EventsCreationForm />} /> {/* Corrected path */}
+            <Route path="/invitation" element={<Invitation />} />
           </Routes>
         </div>
       </Router>
