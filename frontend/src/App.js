@@ -8,6 +8,7 @@ import Profile from './pages/Profile'; // Profile page
 import Navbar from './Components/Navbar'; // Navbar component
 import EventsCreationForm from './Components/EventsCreationForm';
 import Invitation from './pages/Invitation';
+import PartyCustomization from './pages/PartyCustomization';
 
 const theme = createTheme();
 
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/create-event" element={<EventsCreationForm />} />
           <Route path="/invitation" element={<Invitation />} />
+          <Route path="/PartyCustomization" element={<PartyCustomization />} />
         </Routes>
       </div>
     </ThemeProvider>
